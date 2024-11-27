@@ -46,7 +46,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-val imageResources = listOf(
+val listilladeimagenes = listOf(
     R.drawable._802922_57823450_2560_1440,
     R.drawable.images,
     R.drawable.emahhxdwmaesscu,
@@ -58,10 +58,10 @@ val imageResources = listOf(
 fun ImageCards(modifier: Modifier = Modifier) {
     LazyColumn(
         modifier = modifier.fillMaxSize(),
-        contentPadding = PaddingValues(20.dp),
-        verticalArrangement = Arrangement.spacedBy(18.dp)
+        contentPadding = PaddingValues(10.dp),
+        verticalArrangement = Arrangement.spacedBy(25.dp)
     ) {
-        items(imageResources) { imageId ->
+        items(listilladeimagenes) { listilladeimagenes ->
             Card(
                 colors = CardDefaults.cardColors(
                     containerColor = Color.Red,
@@ -69,18 +69,18 @@ fun ImageCards(modifier: Modifier = Modifier) {
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
-                    modifier = Modifier.padding(10.dp)
+                    modifier = Modifier.padding(15.dp)
                 ) {
                     Image(
-                        painter = painterResource(imageId),
+                        painter = painterResource(listilladeimagenes),
                         contentDescription = "Best of Nicaragua",
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(200.dp)
+                            .height(250.dp)
                     )
                     Text(
                         text = "Real de Madriz ${Random.nextInt(10)}",
-                        modifier = Modifier.padding(top = 8.dp)
+                        modifier = Modifier.padding(top = 5.dp)
                     )
                 }
             }
